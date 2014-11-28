@@ -5,6 +5,6 @@ for i in $(find . -type f )
 		#echo $count
 		if [ $count -gt 10 ]
 			then echo "$i;$count"
-			echo $i | sed 's/f/g/g'
+			mv $i $(echo $i | sed 's/f/g/g')
 		fi
 done
